@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="manifest" href="manifest.json" />
     <meta name="theme-color" content="#1a73e8" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -19,565 +19,610 @@
           .catch((err) => console.log("Service Worker failed", err));
       }
     </script>
-
-    <title>Git & GitHub for Absolute Beginners</title>
+    <title>Git & GitHub for Absolute Beginners - Complete Guide</title>
     <style>
-      body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        line-height: 1.8;
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 40px 20px;
-        background: #f5f5f5;
-        color: #333;
-      }
-      .container {
-        background: white;
-        padding: 50px;
-        border-radius: 10px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      }
-      h1 {
-        color: #2c3e50;
-        border-bottom: 4px solid #3498db;
-        padding-bottom: 15px;
-        font-size: 2.5em;
-      }
-      h2 {
-        color: #2980b9;
-        margin-top: 40px;
-        margin-bottom: 20px;
-        font-size: 1.8em;
-        border-left: 5px solid #3498db;
-        padding-left: 15px;
-      }
-      h3 {
-        color: #34495e;
-        margin-top: 30px;
-        font-size: 1.4em;
-      }
-      h4 {
-        color: #555;
-        margin-top: 20px;
-        font-size: 1.2em;
-      }
-      code {
-        background: #f8f9fa;
-        padding: 3px 8px;
-        border-radius: 4px;
-        font-family: "Courier New", monospace;
-        color: #e74c3c;
-        font-size: 0.95em;
-      }
-      pre {
-        background: #2c3e50;
-        color: #ecf0f1;
-        padding: 20px;
-        border-radius: 8px;
-        overflow-x: auto;
-        border-left: 5px solid #3498db;
-      }
-      pre code {
-        background: none;
-        color: #ecf0f1;
-        padding: 0;
-      }
-      .success {
-        background: #d4edda;
-        border-left: 5px solid #28a745;
-        padding: 15px;
-        margin: 20px 0;
-        border-radius: 5px;
-        font-weight: bold;
-        color: #155724;
-      }
-      .step {
-        background: #e3f2fd;
-        border-left: 5px solid #2196f3;
-        padding: 15px;
-        margin: 15px 0;
-        border-radius: 5px;
-      }
-      .problem {
-        background: #fff3cd;
-        border-left: 5px solid #ffc107;
-        padding: 15px;
-        margin: 15px 0;
-        border-radius: 5px;
-      }
-      .tip {
-        background: #f0f4ff;
-        border-left: 5px solid #667eea;
-        padding: 15px;
-        margin: 15px 0;
-        border-radius: 5px;
-      }
-      ul {
-        line-height: 2;
-      }
-      .toc {
-        background: #f8f9fa;
-        padding: 25px;
-        border-radius: 8px;
-        margin: 30px 0;
-      }
-      .toc ul {
-        list-style: none;
-        padding-left: 0;
-      }
-      .toc li {
-        padding: 8px 0;
-      }
-      .toc a {
-        color: #2980b9;
-        text-decoration: none;
-        font-weight: 500;
-      }
-      .toc a:hover {
-        color: #3498db;
-        text-decoration: underline;
-      }
-      .checkmark {
-        color: #28a745;
-        font-weight: bold;
-      }
-      .section-divider {
-        border-top: 2px solid #e0e0e0;
-        margin: 50px 0;
-      }
-      button {
-        background: #3498db;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 1em;
-        margin-top: 20px;
-      }
-      button:hover {
-        background: #2980b9;
-      }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+        
+        h2 {
+            color: #764ba2;
+            font-size: 1.8em;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        h3 {
+            color: #667eea;
+            font-size: 1.4em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        h4 {
+            color: #764ba2;
+            font-size: 1.2em;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            border-left: 5px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .success-box {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+            font-weight: bold;
+            color: #155724;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+            color: #856404;
+        }
+        
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+            border: 2px solid #667eea;
+        }
+        
+        .command {
+            color: #50fa7b;
+        }
+        
+        .comment {
+            color: #6272a4;
+            font-style: italic;
+        }
+        
+        ol, ul {
+            margin: 15px 0 15px 30px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        .step-number {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .toc {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+        
+        .toc h3 {
+            margin-top: 0;
+            color: #764ba2;
+        }
+        
+        .toc ul {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .toc li {
+            padding: 8px 0;
+        }
+        
+        .toc a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        .toc a:hover {
+            color: #764ba2;
+        }
+        
+        .emoji {
+            font-size: 1.3em;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+            .nav-buttons {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <div class="container">
-      <h1>Git & GitHub for Absolute Beginners</h1>
+        <h1>Git & GitHub for Absolute Beginners</h1>
+        <p class="subtitle">A Complete Step-by-Step Guide to Version Control</p>
+        
+        <div class="nav-buttons">
+            <button class="btn" onclick="window.print()">🖨️ Print Guide</button>
+            <button class="btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">⬆️ Back to Top</button>
+        </div>
 
-      <div class="toc">
-        <h2>What You'll Learn</h2>
-        <ul>
-          <li>1. How to install Git on your computer</li>
-          <li>2. How to set up Git with your information</li>
-          <li>3. How to create a GitHub account</li>
-          <li>4. How to create a new repository on GitHub</li>
-          <li>5. How to clone (download) an existing repository</li>
-        </ul>
-      </div>
+        <div class="toc">
+            <h3>📚 Table of Contents</h3>
+            <ul>
+                <li><a href="#part1">Part 1: Installing Git</a></li>
+                <li><a href="#part2">Part 2: Setting Up Git Configuration</a></li>
+                <li><a href="#part3">Part 3: Creating a GitHub Account</a></li>
+                <li><a href="#part4">Part 4: Setting Up SSH Keys</a></li>
+                <li><a href="#part5">Part 5: Creating Your First Repository</a></li>
+                <li><a href="#part6">Part 6: Understanding Git Basics</a></li>
+                <li><a href="#part7">Part 7: Working with Branches</a></li>
+                <li><a href="#part8">Part 8: Cloning Repositories</a></li>
+                <li><a href="#part9">Part 9: The Complete Git Workflow</a></li>
+                <li><a href="#part10">Part 10: Collaborating on GitHub</a></li>
+                <li><a href="#troubleshooting">Troubleshooting & Tips</a></li>
+            </ul>
+        </div>
 
-      <div class="section-divider"></div>
+        <div class="highlight-box">
+            <h3>🎯 What You'll Learn</h3>
+            <ul>
+                <li>How to install and configure Git on any operating system</li>
+                <li>How to create and manage a GitHub account</li>
+                <li>How to set up SSH keys for secure authentication</li>
+                <li>How to create, clone, and manage repositories</li>
+                <li>How to work with branches and merge code</li>
+                <li>The complete Git workflow from start to finish</li>
+                <li>How to collaborate with others on GitHub</li>
+            </ul>
+        </div>
 
-      <h2>Part 1: Installing Git</h2>
+        <h2 id="part1">Part 1: Installing Git</h2>
 
-      <h3>For Windows Users</h3>
+        <h3>For Windows Users 💻</h3>
+        
+        <h4><span class="step-number">1</span>Download Git</h4>
+        <ol>
+            <li>Open your web browser</li>
+            <li>Go to <strong>git-scm.com</strong></li>
+            <li>Click the big <strong>"Download for Windows"</strong> button</li>
+            <li>Wait for the download to complete (approximately 50MB)</li>
+        </ol>
 
-      <div class="step">
-        <h4>Step 1: Go to the Git website</h4>
-        <ul>
-          <li>Open your web browser</li>
-          <li>Type: <code>git-scm.com</code></li>
-          <li>Press Enter</li>
-        </ul>
-      </div>
+        <h4><span class="step-number">2</span>Install Git</h4>
+        <ol>
+            <li>Find the downloaded file in your Downloads folder</li>
+            <li>Double-click the file (e.g., <code>Git-2.43.0-64-bit.exe</code>)</li>
+            <li>Click "Next" through all screens (default options are fine)</li>
+            <li>Click "Install" and wait for completion</li>
+            <li>Click "Finish"</li>
+        </ol>
 
-      <div class="step">
-        <h4>Step 2: Download Git</h4>
-        <ul>
-          <li>Click the big "Download for Windows" button</li>
-          <li>Wait for the download to complete (it's about 50MB)</li>
-        </ul>
-      </div>
+        <h4><span class="step-number">3</span>Verify Installation</h4>
+        <ol>
+            <li>Press the <strong>Windows key</strong></li>
+            <li>Type: <code>cmd</code> (opens Command Prompt)</li>
+            <li>Press Enter</li>
+            <li>Type: <code>git --version</code></li>
+            <li>Press Enter</li>
+        </ol>
 
-      <div class="step">
-        <h4>Step 3: Install Git</h4>
-        <ul>
-          <li>Find the downloaded file (usually in your Downloads folder)</li>
-          <li>
-            Double-click the file named something like
-            <code>Git-2.43.0-64-bit.exe</code>
-          </li>
-          <li>
-            Click "Next" through all the screens (the default options are fine)
-          </li>
-          <li>Click "Install"</li>
-          <li>Wait for installation to complete</li>
-          <li>Click "Finish"</li>
-        </ul>
-      </div>
+        <div class="code-block">
+<span class="command">git --version</span>
+<span class="comment"># Should output something like: git version 2.43.0</span>
+        </div>
 
-      <div class="step">
-        <h4>Step 4: Verify Git is installed</h4>
-        <ul>
-          <li>Press the Windows key on your keyboard</li>
-          <li>Type: <code>cmd</code> (this opens Command Prompt)</li>
-          <li>Press Enter</li>
-          <li>
-            In the black window that appears, type: <code>git --version</code>
-          </li>
-          <li>Press Enter</li>
-          <li>
-            You should see something like: <code>git version 2.43.0</code>
-          </li>
-        </ul>
-      </div>
+        <div class="success-box">
+            ✅ Success! Git is now installed on Windows.
+        </div>
 
-      <div class="success">
-        Success! Git is now installed on your Windows computer.
-      </div>
+        <h3>For Mac Users 🍎</h3>
 
-      <div class="section-divider"></div>
+        <h4><span class="step-number">1</span>Check if Git is Already Installed</h4>
+        <ol>
+            <li>Press <strong>Command + Space</strong> to open Spotlight</li>
+            <li>Type: <code>terminal</code></li>
+            <li>Press Enter</li>
+            <li>Type: <code>git --version</code></li>
+            <li>Press Enter</li>
+        </ol>
 
-      <h3>For Mac Users</h3>
+        <p>If you see a version number, Git is already installed! Skip to Part 2.</p>
 
-      <div class="step">
-        <h4>Step 1: Check if Git is already installed</h4>
-        <ul>
-          <li>Press <code>Command + Space</code> to open Spotlight</li>
-          <li>Type: <code>terminal</code></li>
-          <li>Press Enter</li>
-          <li>In the Terminal window, type: <code>git --version</code></li>
-          <li>Press Enter</li>
-        </ul>
-        <p>
-          If you see a version number, Git is already installed! Skip to Part 2.
-        </p>
-      </div>
-
-      <div class="step">
-        <h4>Step 2: Install Git (if not already installed)</h4>
+        <h4><span class="step-number">2</span>Install Git (if needed)</h4>
+        
         <p><strong>Option A - Easiest Method:</strong></p>
-        <ul>
-          <li>
-            When you typed <code>git --version</code>, a popup might appear
-            asking to install developer tools
-          </li>
-          <li>Click "Install"</li>
-          <li>Wait for installation (this might take 10-15 minutes)</li>
-        </ul>
+        <ol>
+            <li>When you typed <code>git --version</code>, a popup might appear</li>
+            <li>Click "Install" to install developer tools</li>
+            <li>Wait 10-15 minutes for installation</li>
+        </ol>
+
         <p><strong>Option B - Using Homebrew:</strong></p>
+        <div class="code-block">
+<span class="comment"># First install Homebrew (visit brew.sh for the command)</span>
+<span class="command">brew install git</span>
+        </div>
+
+        <div class="success-box">
+            ✅ Success! Git is now installed on Mac.
+        </div>
+
+        <h3>For Linux Users 🐧</h3>
+
+        <h4>Ubuntu/Debian:</h4>
+        <div class="code-block">
+<span class="comment"># Update package list</span>
+<span class="command">sudo apt-get update</span>
+
+<span class="comment"># Install Git</span>
+<span class="command">sudo apt-get install git</span>
+
+<span class="comment"># Verify installation</span>
+<span class="command">git --version</span>
+        </div>
+
+        <h4>Fedora:</h4>
+        <div class="code-block">
+<span class="command">sudo dnf install git</span>
+        </div>
+
+        <div class="success-box">
+            ✅ Success! Git is now installed on Linux.
+        </div>
+
+        <h2 id="part2">Part 2: Setting Up Git Configuration</h2>
+
+        <p>Now that Git is installed, you need to tell Git who you are. This information will be attached to every change you make.</p>
+
+        <h4><span class="step-number">1</span>Open Terminal/Command Prompt</h4>
         <ul>
-          <li>First, install Homebrew by going to <code>brew.sh</code></li>
-          <li>Copy the command shown on the website</li>
-          <li>Paste it in Terminal and press Enter</li>
-          <li>After Homebrew installs, type: <code>brew install git</code></li>
-          <li>Press Enter</li>
+            <li><strong>Windows:</strong> Press Windows key, type <code>cmd</code>, press Enter</li>
+            <li><strong>Mac:</strong> Press Command + Space, type <code>terminal</code>, press Enter</li>
+            <li><strong>Linux:</strong> Press Ctrl + Alt + T</li>
         </ul>
-      </div>
 
-      <div class="step">
-        <h4>Step 3: Verify installation</h4>
-        <ul>
-          <li>Type: <code>git --version</code></li>
-          <li>Press Enter</li>
-          <li>You should see: <code>git version 2.43.0</code> (or similar)</li>
-        </ul>
-      </div>
+        <h4><span class="step-number">2</span>Set Your Name</h4>
+        <div class="code-block">
+<span class="command">git config --global user.name "Your Name"</span>
+<span class="comment"># Example: git config --global user.name "John Smith"</span>
+        </div>
 
-      <div class="success">Success! Git is now installed on your Mac.</div>
+        <h4><span class="step-number">3</span>Set Your Email</h4>
+        <div class="code-block">
+<span class="command">git config --global user.email "your.email@example.com"</span>
+<span class="comment"># Example: git config --global user.email "john.smith@gmail.com"</span>
+        </div>
 
-      <div class="section-divider"></div>
+        <div class="warning-box">
+            <strong>⚠️ Important:</strong> Use the same email address you'll use for GitHub!
+        </div>
 
-      <h3>For Linux Users (Ubuntu/Debian)</h3>
+        <h4><span class="step-number">4</span>Verify Your Settings</h4>
+        <div class="code-block">
+<span class="command">git config --list</span>
+<span class="comment"># You should see your name and email in the output</span>
+        </div>
 
-      <div class="step">
-        <h4>Step 1: Open Terminal</h4>
-        <ul>
-          <li>Press <code>Ctrl + Alt + T</code></li>
-        </ul>
-      </div>
+        <h4><span class="step-number">5</span>Set Default Branch Name (Optional but Recommended)</h4>
+        <div class="code-block">
+<span class="command">git config --global init.defaultBranch main</span>
+<span class="comment"># Sets 'main' as the default branch name for new repositories</span>
+        </div>
 
-      <div class="step">
-        <h4>Step 2: Update package list</h4>
-        <ul>
-          <li>Type: <code>sudo apt-get update</code></li>
-          <li>Press Enter</li>
-          <li>Enter your password when asked</li>
-        </ul>
-      </div>
+        <div class="success-box">
+            ✅ Success! Git now knows who you are.
+        </div>
 
-      <div class="step">
-        <h4>Step 3: Install Git</h4>
-        <ul>
-          <li>Type: <code>sudo apt-get install git</code></li>
-          <li>Press Enter</li>
-          <li>Type <code>Y</code> when asked to confirm</li>
-          <li>Wait for installation</li>
-        </ul>
-      </div>
+        <h2 id="part3">Part 3: Creating a GitHub Account</h2>
 
-      <div class="step">
-        <h4>Step 4: Verify installation</h4>
-        <ul>
-          <li>Type: <code>git --version</code></li>
-          <li>Press Enter</li>
-          <li>You should see: <code>git version 2.43.0</code> (or similar)</li>
-        </ul>
-      </div>
+        <p>GitHub is a website where you can store your code online, collaborate with others, and showcase your projects.</p>
 
-      <div class="success">
-        Success! Git is now installed on your Linux computer.
-      </div>
+        <h4><span class="step-number">1</span>Go to GitHub</h4>
+        <ol>
+            <li>Open your web browser</li>
+            <li>Go to <strong>github.com</strong></li>
+        </ol>
 
-      <div class="section-divider"></div>
+        <h4><span class="step-number">2</span>Sign Up</h4>
+        <ol>
+            <li>Click the <strong>"Sign up"</strong> button (top right corner)</li>
+            <li>Enter a username (e.g., <code>johnsmith123</code>)</li>
+            <li>Enter your email address (same one you used in Git config!)</li>
+            <li>Create a strong password</li>
+            <li>Click "Continue"</li>
+        </ol>
 
-      <h2>Part 2: Setting Up Git</h2>
+        <div class="highlight-box">
+            <strong>💡 Tip:</strong> Your username will be part of your profile URL: <code>github.com/yourusername</code>
+        </div>
 
-      <p>Now that Git is installed, you need to tell Git who you are.</p>
+        <h4><span class="step-number">3</span>Verify Your Account</h4>
+        <ol>
+            <li>Complete the puzzle to prove you're human</li>
+            <li>Click "Create account"</li>
+            <li>Check your email inbox</li>
+            <li>Click the verification link or enter the code</li>
+        </ol>
 
-      <div class="step">
-        <h4>Step 1: Open your terminal/command prompt</h4>
-        <ul>
-          <li>
-            <strong>Windows:</strong> Press Windows key, type <code>cmd</code>,
-            press Enter
-          </li>
-          <li>
-            <strong>Mac:</strong> Press Command + Space, type
-            <code>terminal</code>, press Enter
-          </li>
-          <li><strong>Linux:</strong> Press Ctrl + Alt + T</li>
-        </ul>
-      </div>
+        <h4><span class="step-number">4</span>Complete Setup</h4>
+        <ol>
+            <li>Answer GitHub's welcome questions (or skip them)</li>
+            <li>Choose the free plan</li>
+            <li>Click "Continue"</li>
+        </ol>
 
-      <div class="step">
-        <h4>Step 2: Set your name</h4>
-        <p>Type this command (replace "Your Name" with your actual name):</p>
-        <pre><code>git config --global user.name "Your Name"</code></pre>
-        <p>Press Enter</p>
-        <p>Example:</p>
-        <pre><code>git config --global user.name "John Smith"</code></pre>
-      </div>
+        <div class="success-box">
+            ✅ Success! You now have a GitHub account. 🎉
+        </div>
 
-      <div class="step">
-        <h4>Step 3: Set your email</h4>
-        <p>Type this command (replace the email with your actual email):</p>
-        <pre><code>git config --global user.email "your.email@example.com"</code></pre>
-        <p>Press Enter</p>
-        <p>Example:</p>
-        <pre><code>git config --global user.email "john.smith@gmail.com"</code></pre>
-      </div>
+        <h2 id="part4">Part 4: Setting Up SSH Keys</h2>
 
-      <div class="step">
-        <h4>Step 4: Verify your settings</h4>
-        <p>Type:</p>
-        <pre><code>git config --list</code></pre>
-        <p>Press Enter</p>
-        <p>You should see your name and email in the output.</p>
-      </div>
+        <p>SSH keys provide a secure way to authenticate with GitHub without entering your password every time.</p>
 
-      <div class="success">Success! Git now knows who you are.</div>
-
-      <div class="section-divider"></div>
-
-      <h2>Part 3: Creating a GitHub Account</h2>
-
-      <p>
-        GitHub is a website where you can store your code online and share it
-        with others.
-      </p>
-
-      <div class="step">
-        <h4>Step 1: Go to GitHub</h4>
-        <ul>
-          <li>Open your web browser</li>
-          <li>Type: <code>github.com</code></li>
-          <li>Press Enter</li>
-        </ul>
-      </div>
-
-      <div class="step">
-        <h4>Step 2: Sign up</h4>
-        <ul>
-          <li>Click the "Sign up" button (top right corner)</li>
-          <li>
-            Enter a username (this will be part of your profile URL)
+        <h3>What are SSH Keys?</h3>
+        <div class="highlight-box">
+            <p><strong>SSH keys</strong> are like a special password that your computer shares with GitHub. They come in pairs:</p>
             <ul>
-              <li>Example: <code>johnsmith123</code></li>
-              <li>
-                Your profile will be: <code>github.com/johnsmith123</code>
-              </li>
+                <li><strong>Private key:</strong> Stays on your computer (never share this!)</li>
+                <li><strong>Public key:</strong> Goes on GitHub (safe to share)</li>
             </ul>
-          </li>
-          <li>Enter your email address</li>
-          <li>Create a password (make it strong!)</li>
-          <li>Click "Continue"</li>
-        </ul>
-      </div>
+        </div>
 
-      <div class="step">
-        <h4>Step 3: Verify your account</h4>
+        <h3>Generating SSH Keys</h3>
+
+        <h4><span class="step-number">1</span>Check for Existing Keys</h4>
+        <div class="code-block">
+<span class="comment"># Mac/Linux:</span>
+<span class="command">ls -la ~/.ssh</span>
+
+<span class="comment"># Windows (in Git Bash):</span>
+<span class="command">ls -la ~/.ssh</span>
+        </div>
+
+        <p>If you see files named <code>id_rsa.pub</code> or <code>id_ed25519.pub</code>, you already have SSH keys!</p>
+
+        <h4><span class="step-number">2</span>Generate New SSH Key</h4>
+        <div class="code-block">
+<span class="command">ssh-keygen -t ed25519 -C "your.email@example.com"</span>
+<span class="comment"># Replace with your GitHub email</span>
+        </div>
+
+        <p>When prompted:</p>
+        <ol>
+            <li><strong>"Enter file to save the key":</strong> Press Enter (uses default location)</li>
+            <li><strong>"Enter passphrase":</strong> Press Enter for no passphrase, or type a secure passphrase</li>
+            <li><strong>"Enter same passphrase again":</strong> Press Enter or retype your passphrase</li>
+        </ol>
+
+        <div class="warning-box">
+            <strong>⚠️ Note:</strong> If <code>ed25519</code> doesn't work, use: <code>ssh-keygen -t rsa -b 4096 -C "your.email@example.com"</code>
+        </div>
+
+        <h4><span class="step-number">3</span>Add SSH Key to SSH Agent</h4>
+
+        <p><strong>On Mac/Linux:</strong></p>
+        <div class="code-block">
+<span class="comment"># Start the SSH agent</span>
+<span class="command">eval "$(ssh-agent -s)"</span>
+
+<span class="comment"># Add your key</span>
+<span class="command">ssh-add ~/.ssh/id_ed25519</span>
+        </div>
+
+        <p><strong>On Windows (Git Bash):</strong></p>
+        <div class="code-block">
+<span class="command">eval "$(ssh-agent -s)"</span>
+<span class="command">ssh-add ~/.ssh/id_ed25519</span>
+        </div>
+
+        <h4><span class="step-number">4</span>Copy Your Public Key</h4>
+
+        <p><strong>On Mac:</strong></p>
+        <div class="code-block">
+<span class="command">pbcopy < ~/.ssh/id_ed25519.pub</span>
+<span class="comment"># Copies key to clipboard</span>
+        </div>
+
+        <p><strong>On Linux:</strong></p>
+        <div class="code-block">
+<span class="command">cat ~/.ssh/id_ed25519.pub</span>
+<span class="comment"># Then manually copy the output</span>
+        </div>
+
+        <p><strong>On Windows (Git Bash):</strong></p>
+        <div class="code-block">
+<span class="command">clip < ~/.ssh/id_ed25519.pub</span>
+<span class="comment"># Copies key to clipboard</span>
+        </div>
+
+        <h4><span class="step-number">5</span>Add SSH Key to GitHub</h4>
+        <ol>
+            <li>Go to <strong>github.com</strong> and log in</li>
+            <li>Click your profile picture (top right)</li>
+            <li>Click <strong>"Settings"</strong></li>
+            <li>In the left sidebar, click <strong>"SSH and GPG keys"</strong></li>
+            <li>Click <strong>"New SSH key"</strong> (green button)</li>
+            <li>Give it a title (e.g., "My Laptop")</li>
+            <li>Paste your public key in the "Key" field</li>
+            <li>Click <strong>"Add SSH key"</strong></li>
+            <li>Confirm with your GitHub password if prompted</li>
+        </ol>
+
+        <h4><span class="step-number">6</span>Test Your Connection</h4>
+        <div class="code-block">
+<span class="command">ssh -T git@github.com</span>
+        </div>
+
+        <p>You should see a message like:</p>
+        <div class="code-block">
+Hi yourusername! You've successfully authenticated, but GitHub does not provide shell access.
+        </div>
+
+        <div class="success-box">
+            ✅ Success! Your SSH key is set up and working. 🔐
+        </div>
+
+        <h2 id="part5">Part 5: Creating Your First Repository</h2>
+
+        <h3>Method 1: Create Repository on GitHub First</h3>
+
+        <h4><span class="step-number">1</span>Create New Repository</h4>
+        <ol>
+            <li>Log in to GitHub</li>
+            <li>Click the <strong>"+"</strong> symbol (top right)</li>
+            <li>Select <strong>"New repository"</strong></li>
+        </ol>
+
+        <h4><span class="step-number">2</span>Fill in Repository Details</h4>
         <ul>
-          <li>GitHub will ask you to solve a puzzle (to prove you're human)</li>
-          <li>Complete the puzzle</li>
-          <li>Click "Create account"</li>
-        </ul>
-      </div>
-
-      <div class="step">
-        <h4>Step 4: Check your email</h4>
-        <ul>
-          <li>Open your email inbox</li>
-          <li>Find the email from GitHub</li>
-          <li>Click the verification link or enter the code shown</li>
-        </ul>
-      </div>
-
-      <div class="step">
-        <h4>Step 5: Answer the welcome questions</h4>
-        <ul>
-          <li>GitHub will ask a few questions about how you plan to use it</li>
-          <li>You can skip these or answer them (it's optional)</li>
-          <li>Click "Continue" or "Skip"</li>
-        </ul>
-      </div>
-
-      <div class="success">Success! You now have a GitHub account.</div>
-
-      <div class="section-divider"></div>
-
-      <h2>Part 4: Creating a New Repository on GitHub</h2>
-
-      <p>
-        A repository (or "repo") is like a folder for your project. It holds all
-        your files and tracks changes.
-      </p>
-
-      <div class="step">
-        <h4>Step 1: Log in to GitHub</h4>
-        <ul>
-          <li>Go to <code>github.com</code></li>
-          <li>Click "Sign in" if you're not already logged in</li>
-        </ul>
-      </div>
-
-      <div class="step">
-        <h4>Step 2: Create a new repository</h4>
-        <ul>
-          <li>Look for a "+" symbol in the top right corner</li>
-          <li>Click it</li>
-          <li>Select "New repository"</li>
-        </ul>
-      </div>
-
-      <div class="step">
-        <h4>Step 3: Fill in repository details</h4>
-
-        <p><strong>Repository name:</strong></p>
-        <ul>
-          <li>Type a name for your project (no spaces!)</li>
-          <li>
-            Example: <code>my-first-project</code> or <code>hello-world</code>
-          </li>
+            <li><strong>Repository name:</strong> <code>my-first-project</code> (no spaces!)</li>
+            <li><strong>Description:</strong> "My first GitHub repository"</li>
+            <li><strong>Visibility:</strong> Choose "Public" (for learning)</li>
+            <li><strong>✓ Check:</strong> "Add a README file"</li>
+            <li><strong>Add .gitignore:</strong> None (for now)</li>
+            <li><strong>Choose a license:</strong> None (for now)</li>
         </ul>
 
-        <p><strong>Description (optional):</strong></p>
-        <ul>
-          <li>Type a short description</li>
-          <li>Example: "My first GitHub repository"</li>
-        </ul>
+        <h4><span class="step-number">3</span>Create Repository</h4>
+        <ol>
+            <li>Click the green <strong>"Create repository"</strong> button</li>
+            <li>You'll see your new repository with a README.md file</li>
+        </ol>
 
-        <p><strong>Public or Private:</strong></p>
-        <ul>
-          <li>
-            <strong>Public:</strong> Anyone can see your code (choose this for
-            learning)
-          </li>
-          <li><strong>Private:</strong> Only you can see your code</li>
-          <li>For now, choose <strong>Public</strong></li>
-        </ul>
+        <div class="success-box">
+            ✅ Success! You've created your first GitHub repository! 🎉
+        </div>
 
-        <p><strong>Initialize this repository with:</strong></p>
-        <ul>
-          <li>
-            <span class="checkmark">✓</span> Check "Add a README file"
-            <ul>
-              <li>A README is a file that describes your project</li>
-              <li>This makes it easier to get started</li>
-            </ul>
-          </li>
-        </ul>
+        <h3>Method 2: Create Local Project and Push to GitHub</h3>
 
-        <p><strong>Add .gitignore:</strong></p>
-        <ul>
-          <li>Leave this as "None" for now</li>
-          <li>(This is for ignoring certain files, we'll learn this later)</li>
-        </ul>
+        <h4><span class="step-number">1</span>Create a Project Folder</h4>
+        <div class="code-block">
+<span class="comment"># Navigate to Documents folder</span>
+<span class="command">cd ~/Documents</span>     <span class="comment"># Mac/Linux</span>
+<span class="command">cd Documents</span>       <span class="comment"># Windows</span>
 
-        <p><strong>Choose a license:</strong></p>
-        <ul>
-          <li>Leave this as "None" for now</li>
-          <li>(Licenses tell others how they can use your code)</li>
-        </ul>
-      </div>
+<span class="comment"># Create new folder</span>
+<span class="command">mkdir my-local-project</span>
 
-      <div class="step">
-        <h4>Step 4: Create the repository</h4>
-        <ul>
-          <li>Click the green "Create repository" button at the bottom</li>
-        </ul>
-      </div>
+<span class="comment"># Enter the folder</span>
+<span class="command">cd my-local-project</span>
+        </div>
 
-      <div class="success">
-        Success! You've created your first GitHub repository! 🎉<br /><br />You'll
-        now see your repository page with a README.md file.
-      </div>
-
-      <div class="section-divider"></div>
-
-      <h2>Part 4B: Creating a Local Project and Pushing to GitHub</h2>
-
-      <p>
-        Now let's learn how to create a project on your computer and upload
-        (push) it to GitHub.
-      </p>
-
-      <h3>Creating a Local Project Folder</h3>
-
-      <div class="step">
-        <h4>Step 1: Create a project folder on your computer</h4>
-        <p>
-          Open your terminal/command prompt and navigate to where you want to
-          create your project:
-        </p>
-
-        <p><strong>Windows:</strong></p>
-        <pre><code>cd Documents</code></pre>
-
-        <p><strong>Mac/Linux:</strong></p>
-        <pre><code>cd ~/Documents</code></pre>
-
-        <p>Now create a new folder:</p>
-        <pre><code>mkdir my-local-project</code></pre>
-        <p>(mkdir means "make directory" - it creates a new folder)</p>
-
-        <p>Go into the folder:</p>
-        <pre><code>cd my-local-project</code></pre>
-      </div>
-
-      <div class="step">
-        <h4>Step 2: Create some files in your project</h4>
-        <p>Let's create a simple HTML file. Type this command:</p>
-
-        <p><strong>Windows (Command Prompt):</strong></p>
-        <pre><code>echo &lt;!DOCTYPE html&gt; > index.html
-echo &lt;html&gt; >> index.html
-echo &lt;body&gt; >> index.html
-echo &lt;h1&gt;Hello World!&lt;/h1&gt; >> index.html
-echo &lt;/body&gt; >> index.html
-echo &lt;/html&gt; >> index.html</code></pre>
-
-        <p><strong>Mac/Linux:</strong></p>
-        <pre><code>cat > index.html &lt;&lt;EOF
+        <h4><span class="step-number">2</span>Create Files</h4>
+        <p>Create an <code>index.html</code> file:</p>
+        <div class="code-block">
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;body&gt;
@@ -585,608 +630,119 @@ echo &lt;/html&gt; >> index.html</code></pre>
     &lt;p&gt;This is my first project!&lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-EOF</code></pre>
+        </div>
 
-        <p>
-          Or you can simply open a text editor and create the file manually!
-        </p>
+        <p>Create a <code>README.md</code> file:</p>
+        <div class="code-block">
+# My Local Project
 
-        <p>Let's also create a README file:</p>
-        <p><strong>Windows:</strong></p>
-        <pre><code>echo # My Local Project > README.md
-echo This is my first local project that I'm pushing to GitHub. >> README.md</code></pre>
+This is my first local project that I'm pushing to GitHub!
+        </div>
 
-        <p><strong>Mac/Linux:</strong></p>
-        <pre><code>echo "# My Local Project" > README.md
-echo "This is my first local project that I'm pushing to GitHub." >> README.md</code></pre>
-      </div>
+        <h4><span class="step-number">3</span>Initialize Git Repository</h4>
+        <div class="code-block">
+<span class="command">git init</span>
+<span class="comment"># Output: Initialized empty Git repository</span>
+        </div>
 
-      <div class="step">
-        <h4>Step 3: Verify your files were created</h4>
-        <pre><code>ls</code></pre>
-        <p>(or <code>dir</code> on Windows)</p>
-        <p>You should see:</p>
-        <ul>
-          <li>index.html</li>
-          <li>README.md</li>
-        </ul>
-      </div>
+        <h4><span class="step-number">4</span>Check Status</h4>
+        <div class="code-block">
+<span class="command">git status</span>
+<span class="comment"># Shows untracked files in red</span>
+        </div>
 
-      <h3>Turning Your Folder into a Git Repository</h3>
+        <h4><span class="step-number">5</span>Add Files to Staging Area</h4>
+        <div class="code-block">
+<span class="command">git add .</span>
+<span class="comment"># The dot means "add all files"</span>
 
-      <div class="step">
-        <h4>Step 4: Initialize Git in your project folder</h4>
-        <p>
-          Make sure you're inside your project folder
-          (<code>my-local-project</code>), then type:
-        </p>
-        <pre><code>git init</code></pre>
-        <p>Press Enter</p>
-        <p>
-          You should see: <code>Initialized empty Git repository in ...</code>
-        </p>
-        <p>
-          This creates a hidden <code>.git</code> folder that Git uses to track
-          your changes.
-        </p>
-      </div>
+<span class="comment"># Or add files individually:</span>
+<span class="command">git add index.html</span>
+<span class="command">git add README.md</span>
+        </div>
 
-      <div class="step">
-        <h4>Step 5: Check the status</h4>
-        <pre><code>git status</code></pre>
-        <p>
-          This shows you which files Git sees. You should see your files listed
-          in red under "Untracked files".
-        </p>
-      </div>
+        <h4><span class="step-number">6</span>Commit Your Files</h4>
+        <div class="code-block">
+<span class="command">git commit -m "Initial commit - added index.html and README"</span>
+        </div>
 
-      <div class="step">
-        <h4>Step 6: Add files to Git (staging)</h4>
-        <p>Tell Git which files you want to track:</p>
-        <pre><code>git add .</code></pre>
-        <p>The dot (<code>.</code>) means "add all files in this folder"</p>
-        <p>Or you can add files individually:</p>
-        <pre><code>git add index.html
-git add README.md</code></pre>
-      </div>
-
-      <div class="step">
-        <h4>Step 7: Check status again</h4>
-        <pre><code>git status</code></pre>
-        <p>
-          Now your files should be listed in green under "Changes to be
-          committed".
-        </p>
-      </div>
-
-      <div class="step">
-        <h4>Step 8: Commit your files (save snapshot)</h4>
-        <p>A commit is like saving a snapshot of your project:</p>
-        <pre><code>git commit -m "Initial commit - added index.html and README"</code></pre>
-        <p>
-          The <code>-m</code> means "message" - always write a short description
-          of what you did.
-        </p>
-        <p>You should see output confirming the commit was successful.</p>
-      </div>
-
-      <h3>Creating a Repository on GitHub (for your local project)</h3>
-
-      <div class="step">
-        <h4>Step 9: Create a new repository on GitHub</h4>
-        <ul>
-          <li>Go to <code>github.com</code></li>
-          <li>Click the "+" symbol in top right</li>
-          <li>Select "New repository"</li>
-          <li>
-            Name it: <code>my-local-project</code> (same as your folder name)
-          </li>
-          <li>Add description: "My first local project"</li>
-          <li>Choose <strong>Public</strong></li>
-          <li>
-            <strong>IMPORTANT: Do NOT check "Add a README file"</strong> (we
-            already have one!)
-          </li>
-          <li>Click "Create repository"</li>
-        </ul>
-      </div>
-
-      <div class="step">
-        <h4>Step 10: Copy the repository URL</h4>
-        <p>
-          After creating the repository, GitHub will show you a page with
-          instructions. You'll see a URL like:
-        </p>
-        <code>https://github.com/yourusername/my-local-project.git</code>
-        <p>Copy this URL!</p>
-      </div>
-
-      <h3>Connecting Your Local Project to GitHub</h3>
-
-      <div class="step">
-        <h4>Step 11: Link your local folder to GitHub</h4>
-        <p>
-          Back in your terminal (make sure you're still in the
-          <code>my-local-project</code> folder), type:
-        </p>
-        <pre><code>git remote add origin https://github.com/yourusername/my-local-project.git</code></pre>
-        <p>
-          (Replace <code>yourusername</code> with your actual GitHub username
-          and paste your URL)
-        </p>
-        <p>
-          This tells Git: "The online version of this project is on GitHub at
-          this URL"
-        </p>
-      </div>
-
-      <div class="step">
-        <h4>Step 12: Verify the connection</h4>
-        <pre><code>git remote -v</code></pre>
-        <p>
-          You should see your GitHub URL listed twice (for fetching and
-          pushing).
-        </p>
-      </div>
-
-      <div class="step">
-        <h4>Step 13: Push (upload) your code to GitHub</h4>
-        <pre><code>git push -u origin main</code></pre>
-        <p>Or if it asks you to use <code>master</code> instead:</p>
-        <pre><code>git push -u origin master</code></pre>
-
-        <p><strong>What this means:</strong></p>
-        <ul>
-          <li><code>git push</code> = upload your code</li>
-          <li><code>-u</code> = remember this connection for next time</li>
-          <li><code>origin</code> = the GitHub remote we just added</li>
-          <li><code>main</code> = the branch name</li>
-        </ul>
-
-        <p><strong>If GitHub asks for username and password:</strong></p>
-        <ul>
-          <li>Enter your GitHub username</li>
-          <li>
-            For password, you need a Personal Access Token (not your regular
-            password)
-          </li>
-          <li>
-            Go to GitHub → Settings → Developer settings → Personal access
-            tokens → Generate new token
-          </li>
-          <li>Or use GitHub Desktop app to avoid this step</li>
-        </ul>
-      </div>
-
-      <div class="step">
-        <h4>Step 14: Check GitHub to see your files</h4>
-        <ul>
-          <li>Go back to your browser</li>
-          <li>Refresh your repository page on GitHub</li>
-          <li>
-            You should now see your <code>index.html</code> and
-            <code>README.md</code> files!
-          </li>
-        </ul>
-      </div>
-
-      <div class="success">
-        Success! You've created a local project and pushed it to GitHub! 🎉
-      </div>
-
-      <h3>Making Changes and Pushing Again</h3>
-
-      <p>
-        Now that your project is connected to GitHub, here's how to update it
-        when you make changes:
-      </p>
-
-      <div class="step">
-        <h4>Step 1: Make a change to your file</h4>
-        <p>Open <code>index.html</code> in a text editor and add a new line:</p>
-        <pre><code>&lt;p&gt;I just learned how to use Git and GitHub!&lt;/p&gt;</code></pre>
-        <p>Save the file.</p>
-      </div>
-
-      <div class="step">
-        <h4>Step 2: Check what changed</h4>
-        <pre><code>git status</code></pre>
-        <p>Git will show you that <code>index.html</code> was modified.</p>
-      </div>
-
-      <div class="step">
-        <h4>Step 3: Add the changes</h4>
-        <pre><code>git add index.html</code></pre>
-        <p>Or add all changed files:</p>
-        <pre><code>git add .</code></pre>
-      </div>
-
-      <div class="step">
-        <h4>Step 4: Commit the changes</h4>
-        <pre><code>git commit -m "Added a new paragraph to index.html"</code></pre>
-      </div>
-
-      <div class="step">
-        <h4>Step 5: Push to GitHub</h4>
-        <pre><code>git push</code></pre>
-        <p>
-          (You don't need <code>-u origin main</code> anymore - Git remembers!)
-        </p>
-      </div>
-
-      <div class="step">
-        <h4>Step 6: Verify on GitHub</h4>
-        <p>
-          Refresh your GitHub repository page and click on
-          <code>index.html</code> - you'll see your new changes!
-        </p>
-      </div>
-
-      <div class="success">
-        You now know the complete workflow: Create → Add → Commit → Push! 🚀
-      </div>
-
-      <h3>Quick Summary: The Git Workflow</h3>
-
-      <div class="tip">
-        <p>
-          <strong>Every time you want to save and upload your work:</strong>
-        </p>
+        <h4><span class="step-number">7</span>Create Repository on GitHub</h4>
         <ol>
-          <li><code>git add .</code> - Stage your changes</li>
-          <li>
-            <code>git commit -m "description of changes"</code> - Save a
-            snapshot
-          </li>
-          <li><code>git push</code> - Upload to GitHub</li>
+            <li>Go to GitHub and click "+" → "New repository"</li>
+            <li>Name it: <code>my-local-project</code></li>
+            <li><strong>Important:</strong> Do NOT check "Add a README file"</li>
+            <li>Click "Create repository"</li>
         </ol>
-        <p>
-          <strong>Remember this pattern - you'll use it constantly!</strong>
-        </p>
-      </div>
 
-      <div class="section-divider"></div>
+        <h4><span class="step-number">8</span>Connect Local to GitHub</h4>
+        <p>After creating the repository, GitHub shows you commands. Use the SSH URL:</p>
+        <div class="code-block">
+<span class="comment"># Add remote repository</span>
+<span class="command">git remote add origin git@github.com:yourusername/my-local-project.git</span>
 
-      <h2>Part 5: Cloning an Existing Repository</h2>
+<span class="comment"># Verify connection</span>
+<span class="command">git remote -v</span>
+        </div>
 
-      <p>
-        Cloning means downloading a copy of a repository from GitHub to your
-        computer.
-      </p>
+        <h4><span class="step-number">9</span>Push to GitHub</h4>
+        <div class="code-block">
+<span class="command">git push -u origin main</span>
+<span class="comment"># -u sets upstream, so next time you can just use: git push</span>
+        </div>
 
-      <h3>Method 1: Cloning Your Own Repository</h3>
+        <div class="success-box">
+            ✅ Success! Your local project is now on GitHub! 🚀
+        </div>
 
-      <div class="step">
-        <h4>Step 1: Get the repository URL</h4>
-        <ul>
-          <li>Go to your repository on GitHub</li>
-          <li>Click the green "Code" button</li>
-          <li>
-            You'll see a URL like:
-            <code>https://github.com/yourusername/my-first-project.git</code>
-          </li>
-          <li>Click the copy icon (📋) next to the URL</li>
-        </ul>
-      </div>
+        <h2 id="part6">Part 6: Understanding Git Basics</h2>
 
-      <div class="step">
-        <h4>Step 2: Choose where to save it on your computer</h4>
-        <ul>
-          <li>Open your terminal/command prompt</li>
-          <li>Navigate to where you want to save the project</li>
-        </ul>
-        <p>For example, to save it in your Documents folder:</p>
-        <p><strong>Windows:</strong></p>
-        <pre><code>cd Documents</code></pre>
-        <p><strong>Mac/Linux:</strong></p>
-        <pre><code>cd ~/Documents</code></pre>
-        <p>Press Enter</p>
-      </div>
+        <h3>The Three States of Git</h3>
+        <div class="highlight-box">
+            <ol>
+                <li><strong>Modified:</strong> You've changed a file but haven't saved it to Git yet</li>
+                <li><strong>Staged:</strong> You've marked a modified file to go in your next commit</li>
+                <li><strong>Committed:</strong> The file is safely stored in your Git database</li>
+            </ol>
+        </div>
 
-      <div class="step">
-        <h4>Step 3: Clone the repository</h4>
-        <p>Type <code>git clone</code> followed by the URL you copied:</p>
-        <pre><code>git clone https://github.com/yourusername/my-first-project.git</code></pre>
-        <p>Press Enter</p>
-        <p>You'll see output like:</p>
-        <pre><code>Cloning into 'my-first-project'...
-remote: Enumerating objects: 3, done.
-remote: Counting objects: 100% (3/3), done.
-remote: Total 3 (delta 0), reused 0 (delta 0)
-Unpacking objects: 100% (3/3), done.</code></pre>
-      </div>
+        <h3>Essential Git Commands</h3>
 
-      <div class="step">
-        <h4>Step 4: Enter the project folder</h4>
-        <pre><code>cd my-first-project</code></pre>
-        <p>Press Enter</p>
-      </div>
+        <h4>Check Status</h4>
+        <div class="code-block">
+<span class="command">git status</span>
+<span class="comment"># Shows which files are modified, staged, or untracked</span>
+        </div>
 
-      <div class="step">
-        <h4>Step 5: Verify you have the files</h4>
-        <p>Type:</p>
-        <pre><code>ls</code></pre>
-        <p>(On Windows, you might need to type <code>dir</code> instead)</p>
-        <p>Press Enter</p>
-        <p>You should see the README.md file listed.</p>
-      </div>
+        <h4>Add Files to Staging</h4>
+        <div class="code-block">
+<span class="command">git add filename.txt</span>      <span class="comment"># Add specific file</span>
+<span class="command">git add .</span>                 <span class="comment"># Add all files</span>
+<span class="command">git add *.js</span>              <span class="comment"># Add all JavaScript files</span>
+        </div>
 
-      <div class="success">
-        Success! You've cloned your repository to your computer.
-      </div>
+        <h4>Commit Changes</h4>
+        <div class="code-block">
+<span class="command">git commit -m "Your commit message"</span>
+<span class="command">git commit -am "Add and commit in one step"</span>  <span class="comment"># For tracked files only</span>
+        </div>
 
-      <div class="section-divider"></div>
+        <div class="highlight-box">
+            <strong>💡 Writing Good Commit Messages:</strong>
+            <ul>
+                <li>Be clear and concise</li>
+                <li>Use present tense ("Add feature" not "Added feature")</li>
+                <li>Explain what and why, not how</li>
+                <li>Examples: "Fix login button bug", "Add user profile page", "Update README with installation instructions"</li>
+            </ul>
+        </div>
 
-      <h3>Method 2: Cloning Someone Else's Repository</h3>
+        <h4>View Commit History</h4>
+        <div class="code-block">
+<span class="command">git log</span>                   <span class="comment"># Full history</span>
+<span class="command">git log --oneline</span>         <span class="comment"># Compact view</span>
+<span class="command">git log --graph</span>           <span class="comment"># Visual branch graph</span>
+        </div>
 
-      <p>Let's practice by cloning a real repository.</p>
-
-      <div class="step">
-        <h4>Step 1: Find a repository to clone</h4>
-        <ul>
-          <li>Open your web browser</li>
-          <li>Go to: <code>github.com/octocat/Hello-World</code></li>
-          <li>This is GitHub's example repository</li>
-        </ul>
-      </div>
-
-      <div class="step">
-        <h4>Step 2: Copy the repository URL</h4>
-        <ul>
-          <li>Click the green "Code" button</li>
-          <li>
-            Copy the URL:
-            <code>https://github.com/octocat/Hello-World.git</code>
-          </li>
-        </ul>
-      </div>
-
-      <div class="step">
-        <h4>Step 3: Open terminal and navigate to where you want to save it</h4>
-        <pre><code>cd Documents</code></pre>
-      </div>
-
-      <div class="step">
-        <h4>Step 4: Clone the repository</h4>
-        <pre><code>git clone https://github.com/octocat/Hello-World.git</code></pre>
-        <p>Press Enter</p>
-      </div>
-
-      <div class="step">
-        <h4>Step 5: Enter the folder</h4>
-        <pre><code>cd Hello-World</code></pre>
-      </div>
-
-      <div class="step">
-        <h4>Step 6: Look at the files</h4>
-        <pre><code>ls</code></pre>
-        <p>(or <code>dir</code> on Windows)</p>
-      </div>
-
-      <div class="success">
-        Success! You've cloned someone else's repository.
-      </div>
-
-      <div class="section-divider"></div>
-
-      <h2>Understanding What Just Happened</h2>
-
-      <h3>What is Git?</h3>
-      <p>
-        Git is a tool that runs on your computer. It tracks changes to your
-        files, like a super-powered "undo" button that remembers everything.
-      </p>
-
-      <h3>What is GitHub?</h3>
-      <p>
-        GitHub is a website where you can store your Git projects online. It's
-        like Google Drive or Dropbox, but specifically for code.
-      </p>
-
-      <h3>What is a Repository?</h3>
-      <p>
-        A repository is a project folder that Git watches. It remembers every
-        change you make to files inside it.
-      </p>
-
-      <h3>What is Cloning?</h3>
-      <p>
-        Cloning is making a copy of a repository from GitHub onto your computer.
-        You get all the files and all the history of changes.
-      </p>
-
-      <div class="section-divider"></div>
-
-      <h2>Quick Reference: Commands You Learned</h2>
-
-      <h3>Installation Check</h3>
-      <pre><code>git --version</code></pre>
-      <p>Shows what version of Git you have installed</p>
-
-      <h3>Setup Commands</h3>
-      <pre><code>git config --global user.name "Your Name"
-git config --global user.email "your.email@example.com"
-git config --list</code></pre>
-
-      <h3>Cloning</h3>
-      <pre><code>git clone https://github.com/username/repository-name.git</code></pre>
-      <p>Downloads a repository from GitHub to your computer</p>
-
-      <h3>Navigation Commands</h3>
-      <pre><code>cd folder-name          # Go into a folder
-cd ..                   # Go up one level
-cd ~/Documents          # Go to Documents folder (Mac/Linux)
-cd Documents            # Go to Documents folder (Windows)
-ls                      # List files (Mac/Linux)
-dir                     # List files (Windows)</code></pre>
-
-      <div class="section-divider"></div>
-
-      <h2>What's Next?</h2>
-
-      <p>
-        Now that you've learned the basics, here's what you should practice:
-      </p>
-
-      <ol>
-        <li>
-          <strong>Create 2-3 repositories</strong> on GitHub
-          <ul>
-            <li>Give them different names</li>
-            <li>Add README files</li>
-            <li>Practice creating them</li>
-          </ul>
-        </li>
-        <li>
-          <strong>Clone your repositories</strong> to your computer
-          <ul>
-            <li>Clone them to different folders</li>
-            <li>Look at the files</li>
-            <li>Get comfortable with the process</li>
-          </ul>
-        </li>
-        <li>
-          <strong>Explore other people's repositories</strong>
-          <ul>
-            <li>Search GitHub for topics you're interested in</li>
-            <li>Clone a few small projects</li>
-            <li>Look at how others organize their code</li>
-          </ul>
-        </li>
-        <li>
-          <strong>Learn the next steps:</strong>
-          <ul>
-            <li>How to make changes to files</li>
-            <li>How to save (commit) those changes</li>
-            <li>How to upload (push) changes to GitHub</li>
-            <li>How to download (pull) new changes</li>
-          </ul>
-        </li>
-      </ol>
-
-      <div class="section-divider"></div>
-
-      <h2>Common Problems and Solutions</h2>
-
-      <div class="problem">
-        <h4>Problem 1: "git: command not found"</h4>
-        <p>
-          <strong>Solution:</strong> Git isn't installed correctly. Go back to
-          Part 1 and reinstall.
-        </p>
-      </div>
-
-      <div class="problem">
-        <h4>Problem 2: "Permission denied"</h4>
-        <p>
-          <strong>Solution:</strong> You might be trying to clone into a
-          protected folder. Try cloning to your Documents folder instead.
-        </p>
-      </div>
-
-      <div class="problem">
-        <h4>Problem 3: Can't find the cloned folder</h4>
-        <p>
-          <strong>Solution:</strong> Check which folder you were in when you ran
-          the clone command. Use <code>pwd</code> (Mac/Linux) or
-          <code>cd</code> (Windows) to see your current location.
-        </p>
-      </div>
-
-      <div class="problem">
-        <h4>Problem 4: "fatal: repository not found"</h4>
-        <p>
-          <strong>Solution:</strong> Check that you copied the URL correctly.
-          Make sure there are no extra spaces.
-        </p>
-      </div>
-
-      <div class="problem">
-        <h4>Problem 5: GitHub asks for username and password repeatedly</h4>
-        <p>
-          <strong>Solution:</strong> This is normal for HTTPS cloning. Later,
-          you can learn about SSH keys which make this easier.
-        </p>
-      </div>
-
-      <div class="section-divider"></div>
-
-      <h2>Tips for Beginners</h2>
-
-      <div class="tip">
-        <ol>
-          <li>
-            <strong>Don't worry about making mistakes</strong> - You can always
-            delete a repository and start over
-          </li>
-          <li>
-            <strong>Practice often</strong> - Create repositories and clone them
-            until it feels natural
-          </li>
-          <li>
-            <strong>Read the messages</strong> - Git and GitHub show helpful
-            messages when something goes wrong
-          </li>
-          <li>
-            <strong>Start simple</strong> - Don't try to learn everything at
-            once
-          </li>
-          <li>
-            <strong>Take notes</strong> - Write down the commands you use most
-            often
-          </li>
-          <li>
-            <strong>Ask for help</strong> - The developer community is friendly
-            to beginners
-          </li>
-        </ol>
-      </div>
-
-      <div class="section-divider"></div>
-
-      <h2>Congratulations!</h2>
-
-      <p>
-        You've completed the absolute beginner's guide to Git and GitHub! You
-        now know how to:
-      </p>
-
-      <ul>
-        <li><span class="checkmark">✓</span> Install Git on your computer</li>
-        <li>
-          <span class="checkmark">✓</span> Set up Git with your information
-        </li>
-        <li><span class="checkmark">✓</span> Create a GitHub account</li>
-        <li>
-          <span class="checkmark">✓</span> Create a new repository on GitHub
-        </li>
-        <li>
-          <span class="checkmark">✓</span> Clone repositories to your computer
-        </li>
-      </ul>
-
-      <p>
-        These are the essential first steps that every developer needs to learn.
-        Take your time practicing these skills before moving on to more advanced
-        topics.
-      </p>
-
-      <div class="success" style="text-align: center; font-size: 1.2em">
-        Happy coding! 🚀
-      </div>
-
-      <button onclick="window.print()">Print This Guide</button>
-      <button onclick="selectAll()">Select All Text</button>
-    </div>
-
-    <script>
-      function selectAll() {
-        const range = document.createRange();
-        range.selectNode(document.querySelector(".container"));
-        window.getSelection().removeAllRanges();
-        window.getSelection().addRange(range);
-        alert("All text selected! Press Ctrl+C (or Cmd+C on Mac) to copy.");
-      }
-    </script>
-  </body>
-</html>
+        <h4>View Changes</h4>
+        <div class="code-block">
+<span class="command">git diff</span>                
